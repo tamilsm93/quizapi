@@ -9,6 +9,7 @@ class ExamsController < ApplicationController
     	@exams = Exams.new(exam_params)
     end
 
-  private exam_params
+    private exam_params
   	params.require(:exams).permit(:exam_id)
-  end	
+    end	
+  end

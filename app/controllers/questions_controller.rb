@@ -8,8 +8,8 @@ class QuestionsController < ApplicationController
     	@question = Question.new(question_params)
     end
 
-
-private
-def question_params
-	params.require(:question).permit(:question_id, :question_answer, :question_canswer)
-end
+    private
+	def question_params
+		params.require(:question).permit(:question_id, :question_answer, :question_canswer)
+	end
+  end
