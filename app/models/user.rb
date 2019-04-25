@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-	has_anscestry
+	has_ancestry
 	has_many :subjects
 end
