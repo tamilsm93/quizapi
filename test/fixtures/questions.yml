@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question_id: 1
+  question: MyText
+  correct_option: MyText
+  option2: MyText
+  option3: MyText
+  option4: MyText
+
+two:
+  question_id: 1
+  question: MyText
+  correct_option: MyText
+  option2: MyText
+  option3: MyText
+  option4: MyText
