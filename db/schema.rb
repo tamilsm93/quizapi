@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_26_060026) do
+ActiveRecord::Schema.define(version: 2019_04_26_112322) do
 
   create_table "chapters", force: :cascade do |t|
-    t.integer "chapter_id"
     t.string "chapter_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -38,12 +37,20 @@ ActiveRecord::Schema.define(version: 2019_04_26_060026) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "subjects", force: :cascade do |t|
-    t.integer "subject_id"
-    t.string "subject_name"
+  create_table "quizzes", force: :cascade do |t|
+    t.text "question"
+    t.text "answer"
+    t.text "option1"
+    t.text "option2"
+    t.text "option3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "ancestry"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.text "subject_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "topics", force: :cascade do |t|
