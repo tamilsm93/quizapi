@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_26_005455) do
+ActiveRecord::Schema.define(version: 2019_04_26_060026) do
 
   create_table "chapters", force: :cascade do |t|
     t.integer "chapter_id"
@@ -20,9 +20,11 @@ ActiveRecord::Schema.define(version: 2019_04_26_005455) do
   end
 
   create_table "exams", force: :cascade do |t|
-    t.text "examname"
+    t.string "subject_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_exams_on_ancestry"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(version: 2019_04_26_005455) do
     t.string "subject_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "ancestry"
   end
 
   create_table "topics", force: :cascade do |t|

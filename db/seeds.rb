@@ -16,3 +16,6 @@ end
 
 
 
+exam_2 = Subject.create(subject_name: 'English',parent: subject)
+Subject.create(subject_name: 'computer science')
+
